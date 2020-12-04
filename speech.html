@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>新作ガレア</title>
+</head>
+<body>
+    <h2>新作ガレア</h2>
+    <button id="btn">スタート</button>
+    <button id="result">集計する</button>
+    <button id="stop">ストップ</button>
+    <div id="content"></div>
+
+    <p id="resultContent"></p>
+
+    <script>
+        const speech = new webkitSpeechRecognition();
+        speech.lang = 'ja-JP';
+        speech.continuous = true;
+
+        const btn = document.getElementById('btn');
+        const resultBtn = document.getElementById('result');
+        const stop = document.getElementById('stop');
+        const resultContent = document.getElementById('resultContent');
+        const content = document.getElementById('content');
+        
+        stop.addEventListener('click', ()=> {
+            speech.stop();
+        })
+
+        let i = 0;
+        let array = [];
+
+        resultBtn.addEventListener('click', ()=> {
+            resultContent.innerText =  array.join(' ');
+        });
+
+        btn.addEventListener('click' , () => {
+            speech.start();
+        });
+
+        speech.onresult = function(e) {
+            array.push(e.results[i][0].transcript);
+            console.log(e);
+            if(e.results[i].isFinal){
+                let autotext =  e.results[i][0].transcript;
+                content.innerHTML += '<div>'+ autotext +'</div>';
+            }
+            i++;
+        }
+
+
+        speech.onend = () => { 
+            speech.start() 
+        };
+
+      </script>
+</body>
+</html>

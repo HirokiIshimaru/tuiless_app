@@ -1,0 +1,111 @@
+@import 'vars';
+@import 'ress';
+@import 'common';
+@import 'bgc';
+@import 'btnStyle';
+.wrapper{
+    z-index: 1;
+}
+header{
+    width: 100%;
+    margin-top: 70px;
+    text-align: left;
+    .backBtn{
+        margin-left: 30px;  
+    }
+}
+main{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    .theme{
+        width: 100%;
+        height: 100%;
+        margin: 80px 0;
+        color: #fff;
+        font-size: 30px;
+        font-weight: 350;
+    }
+    .timer{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        p{
+            color: #fff;
+            font-size: 100px;
+        }
+    }
+    .btn{
+        @include btn;
+        width: 300px;
+        height: 115px;
+        color: $buttonFontColor;
+        font-size: 50px;
+        font-weight: 300;
+        margin-top: 100px;
+    }
+    .btnBox{
+        display: none;
+        justify-content: space-around;
+        margin-top: 100px;
+        &__btn{
+            width: 125px;
+            height: 125px;
+            background-color: #fff;
+            border-radius: 50%;
+        }
+    }
+    .end{
+        z-index: 100;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba($color: #000000, $alpha: 0.6);
+        &__box{
+            width: 300px;
+            height: 300px;
+            background-color: #fff;
+            p{
+                font-size: 20px;
+                font-weight: 350;
+                margin: 40px 0;
+            }
+            &__btn{
+                @include btn;
+                width: 200px;
+                height: 50px;
+                margin: 10px 0;
+                &:nth-child(2){
+                    color: #FF6464;
+                    font-size: 18px;
+                }
+                &:nth-child(3){
+                    color: $buttonFontColor;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    .timeOut{
+        @extend .end;
+        &__box{
+            @extend .end__box;
+            &__btn{
+                @extend .end__box__btn;
+                &:nth-child(2){
+                    color: $buttonFontColor;
+                }
+                &:nth-child(3){
+                    color: #fff;
+                    background-color: #767676;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<meta name="keywords" content="">
+<meta name="description" content="ここに説明文を設定">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@twitteraccount">
+<meta property="og:site_name" content="サイト名">
+<meta property="og:title" content="サイトタイトル">
+<meta property="og:description" content="サイト説明文">
+<meta property="og:url" content="https://www.hogehoge.com">
+<meta property="og:image" content="https://www.hogehoge.com./hoge.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="600">
+<meta property="og:image:height" content="400">
+<meta property="og:type" content="website">
+<link rel="shortcut icon" href="http://www.hoge.hoge/favicon.ico" type="image/vnd.microsoft.icon">
+<link rel="apple-touch-icon" href="http://www.hoge.hoge/logo.png">
+<link rel="stylesheet" href="css/counter.css">
+<title>カウント画面</title>
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <a href="setting.html" class="backBtn" id="backBtn">
+            <img src="img/back.png" alt="">
+        </a>
+    </header>
+    <main>
+        <div class="theme" id="theme"></div>
+        <div class="timer" id="timer">
+            <p id="min"></p>
+            <p>:</p>
+            <p id="sec"></p>
+        </div>
+        <button class="btn" id="startBtn">START</button>
+        <div class="btnBox btnShow" id="btnBox">
+            <button class="btnBox__btn" id="stop">
+                <img src="img/stop.png" alt="">
+            </button>
+            <button class="btnBox__btn" id="pause">
+                <img src="img/pause.png" alt="">
+            </button>
+            <button class="btnBox__btn" id="restart">
+                <img src="img/restart.png" alt="">
+            </button>
+        </div>
+        <div class="end" id="end">
+            <div class="end__box">
+                <p>本当に終了しますか？</p>
+                <button class="end__box__btn" id="endStop">終了する</button>
+                <button class="end__box__btn" id="endRestart">続ける</button>
+            </div>
+        </div>
+        <div class="timeOut" id="timeOut">
+            <div class="timeOut__box">
+                <p>タイムアップ</p>
+                <button class="timeOut__box__btn" id="timeOutStop">結果を見る</button>
+                <button class="timeOut__box__btn" id="redo">やり直す</button>
+            </div>
+        </div>
+        <div class="result" id="result">
+            <div class="result__box">
+                <p>結果</p>
+                <div class="result__box__content"></div>
+                <form action="#" method="post" class="result__box__save">
+                    <input type="checkbox" name="hozon" value="1">記録に保存する
+                </form>
+                <button class="result__box__btn">もう一度する</button>
+                <button class="result__box__btn">終了する</button>
+            </div>
+        </div>
+    </main>
+</div>
+
+</body>
+<script src="js/counter.js"></script>
+</html>

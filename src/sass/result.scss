@@ -1,0 +1,84 @@
+@import 'vars';
+@import 'ress';
+@import 'common';
+@import 'bgc';
+@import 'btnStyle';
+
+.wrapper{
+    z-index: 1;
+}
+
+main{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    .result{
+        z-index: 100;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba($color: #000000, $alpha: 0.3);
+        &__box{
+            width: 300px;
+            height: 510px;
+            background-color: #fff;
+            &__ttl{
+                font-size: 20px;
+                font-weight: 350;
+                margin: 40px 0;
+            }
+            &__content{
+                width: 240px;
+                height: 180px;
+                margin: 20px auto;
+                overflow-x: hidden;
+                overflow-y: scroll;
+                .speechBox{
+                    width: 240px;
+                    margin-bottom: 30px;
+                    border-bottom: solid 1px #C7C7C7;
+                }
+                .speech_content{
+                    position: relative;
+                    font-size: 16px;
+                    text-align: left;
+                    .length{
+                        width: 50px;
+                        height: 100%;
+                        position: absolute;
+                        right: 0;
+                        text-align: right;
+                    }
+                }
+            }
+            &__save{
+                text-align: left;
+                padding-left: 30px;
+                font-size: 12px;
+                margin-bottom: 20px;
+                input{
+                    margin-right: 10px;
+                }
+            }
+            &__btn{
+                @include btn;
+                width: 200px;
+                height: 50px;
+                margin: 10px 0;
+                &:nth-child(4){
+                    color: #FF6464;
+                    font-size: 18px;
+                }
+                &:nth-child(5){
+                    color: $buttonFontColor;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}

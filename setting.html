@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<meta name="keywords" content="">
+<meta name="description" content="ここに説明文を設定">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@twitteraccount">
+<meta property="og:site_name" content="サイト名">
+<meta property="og:title" content="サイトタイトル">
+<meta property="og:description" content="サイト説明文">
+<meta property="og:url" content="https://www.hogehoge.com">
+<meta property="og:image" content="https://www.hogehoge.com./hoge.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="600">
+<meta property="og:image:height" content="400">
+<meta property="og:type" content="website">
+<link rel="shortcut icon" href="http://www.hoge.hoge/favicon.ico" type="image/vnd.microsoft.icon">
+<link rel="apple-touch-icon" href="http://www.hoge.hoge/logo.png">
+<link rel="stylesheet" href="css/setting.css">
+<title>設定画面</title>
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <a href="start.html" class="backBtn">
+            <img src="img/back.png" alt="">
+        </a>
+        <h1>設定</h1>
+        <a href="setting_ng.html" class="ngBtn">
+            <img src="img/ng_button.png" alt="">
+        </a>
+    </header>
+    <main>
+        <div class="theme">
+            <p>テーマ</p>
+            <input type="text" placeholder=" 空はなぜ青いのか" id="theme">
+        </div>
+        <div class="time">
+            <p>時間</p>
+            <select name="time" id="time">
+                <option value="">選択する</option>
+                <option value="60">1分</option>
+                <option value="120">2分</option>
+                <option value="180">3分</option>
+                <option value="240">4分</option>
+                <option value="300">5分</option>
+                <option value="360">6分</option>
+                <option value="420">7分</option>
+                <option value="480">8分</option>
+                <option value="540">9分</option>
+                <option value="600">10分</option>
+            </select>
+        </div>
+        <div class="btn">
+            <button class="btn__comp" id="btn">設定完了</button>
+        </div>
+        <div class="errow" id="errow">
+            <div class="errow__box">
+                <h2>エラー</h2>
+                <p>テーマまたは時間が設定されていません</p>
+                <button class="errow__box__btn" id="errowStop">了解</button>
+            </div>
+        </div>
+    </main>
+</div>
+</body>
+<script src="js/setting.js"></script>
+</html>

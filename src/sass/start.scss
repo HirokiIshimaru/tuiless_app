@@ -1,0 +1,31 @@
+@import 'vars';
+@import 'ress';
+@import 'common';
+@import 'bgc';
+@import 'btnStyle';
+
+.ng{
+    width: 100%;
+    margin-top: 74px;
+    text-align: right;
+    &__btn{
+        margin-right: 35px;
+    }
+}
+.logoTtl{
+    text-align: center;
+    margin: 120px 0;
+    h2{
+        color: $fontColor;
+        font-size: 50px;
+        font-weight: 300;
+        text-align: center;
+} 
+}
+.btn{
+    @include btn;
+    &__box:nth-child(2){
+        @include btn(#767676,#fff);
+        margin-top: 32px;
+    }
+}

@@ -1,0 +1,94 @@
+@import 'vars';
+@import 'ress';
+@import 'common';
+@import 'bgc';
+@import 'btnStyle';
+
+body {
+    color: $fontColor;
+}
+
+.header{
+    width: 80%;
+    margin: 70px auto 0;
+    display: flex;
+    justify-items: center;
+    position: relative;
+    h1 {
+        color: $fontColor;
+        margin: 0 auto;
+    }
+    .backBtn {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+.container {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 304px;
+    margin-top: 40px;
+    position: relative;
+}
+.ttl-medium {
+    font-size: 20px; 
+    font-weight: normal;  
+}
+.word-list {
+    margin-top: 16px;
+}
+.word-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+.ng-word {
+    max-width: 252px;
+    height: 36px;
+    width: 80%;
+    font-size: 14px;
+    padding-left: 10px;
+    color: #000;
+    background-color: $fontColor;;
+}
+.delete-btn {
+    background-color: $warning;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+        display: block;
+        width: 10px;
+        height: 2px;
+        background-color: $fontColor;;
+    }
+}
+
+.btns {
+    text-align: center;
+    margin: 200px auto 0;
+    button {
+        margin-bottom: 20px;
+    }
+}
+
+.btn--normal {
+    background-color: $fontColor;;
+    color: $buttonFontColor;
+    width: 200px;
+    height: 48px;
+    margin: 0 auto;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+    font-weight: bold;
+    font-size: 18px;
+    &.gray {
+        background-color: #767676;
+        color: $fontColor;
+    }
+}

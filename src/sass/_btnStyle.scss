@@ -1,0 +1,17 @@
+@mixin btn($shadow_color:#fff,$font_color:#4481E5){
+    width: 320px;
+    height: 60px;
+    margin: 0 auto;
+    background-color: $shadow_color;
+    box-shadow: 1px 3px 7px rgba($color: #000000, $alpha:0.3);
+    a{
+        display: inline-block;
+        width: 100%;
+        line-height: 60px;
+        text-align: center;
+        color: $font_color;
+        font-size: 20px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+}
